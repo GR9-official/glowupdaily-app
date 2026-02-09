@@ -458,7 +458,7 @@
     
     .badges{
       display:flex;
-      gap:clamp(8px, 2vw, 12px);
+      gap:clamp(8px, 2vw, 14px);
       flex-wrap:wrap;
       justify-content:center;
     }
@@ -1083,13 +1083,22 @@
           <div class="feature"><h4>Beautiful and fast</h4><p>Modern Compose UI, smooth animations, and lightweight interactions.</p></div>
           <div class="feature"><h4>Private and secure by design</h4><p>Firebase Auth, server‑verified purchases, and in‑app data controls.</p></div>
         </div>
-        <div style="margin-top:18px" class="badges">
-          <a class="store" href="https://play.google.com/store/apps/details?id=com.glowupdaily.app">
-		  <img src="play-icon.png" alt="Google Play" class="store-img">
-		</a>
+        <div style="display: flex; align-items: center; gap: 15px; margin-top: 18px;">
 
+			<div class="badges">
+				<a class="store" href="https://play.google.com/store/apps/details?id=com.glowupdaily.app">
+					<img src="play-icon.png" alt="Google Play" class="store-img">
+				</a>
+			</div>
 
-        </div>
+			<div class="badges">
+				<a class="store" href="https://www.apple.com/app-store/">
+					<img src="app-store-icon.png" alt="App Store" class="store-img">
+				</a>
+			</div>
+
+		</div>
+		
       </div>
     </section>
 
@@ -1110,7 +1119,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
         </details>
         <details class="item">
           <summary>Do I need an account?</summary>
-          <p>Yes — sign in with Google or email/password to sync your progress across devices.</p>
+          <p>Yes — sign in with Google/Apple to sync your progress across devices.</p>
         </details>
         <details class="item">
           <summary>What data do you store?</summary>
@@ -1130,7 +1139,9 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
         </details>
 		<details class="item">
           <summary>How do I manage my subscription?</summary>
-          <p>The app uses a secure, Firebase-authenticated proxy to Google’s Gemini model. Your requests are tied to your account for safety and abuse protection.</a></p>
+          <p>Subscriptions are managed directly by the store you purchased from. You can cancel or manage them in your device settings:
+		  Android: Google Play Store → Payments & subscriptions.
+		  iOS: Apple App Store (Profile icon) → Subscriptions.</a></p>
         </details>
 		<details class="item">
           <summary>Can I change my email or password?</summary>
@@ -1155,7 +1166,8 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  
 		  <h4>2) Scope</h4>
 		  <p>
-			This Privacy Policy explains how <strong>GlowUp Daily</strong> (“we”, “us”, “our”) processes personal data when you use our Android app and related services.
+			This Privacy Policy explains how <strong>GlowUp Daily</strong> (“we”, “us”, “our”) processes personal data
+			when you use our mobile applications (available on Android and iOS)	and related services.
 			It applies to users located in the European Economic Area (EEA), including Romania, and worldwide.  
 			We comply with the EU General Data Protection Regulation (GDPR) and applicable Romanian law.
 		  </p>
@@ -1170,7 +1182,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  <ul>
 			<li>Email address</li>
 			<li>Firebase User ID (UID)</li>
-			<li>Google account ID token (for sign-in, not retained long-term)</li>
+			<li>Google account ID token or Apple ID token (for sign-in, not retained long-term)</li>
 		  </ul>
 
 		  <h5>Profile and app content you provide</h5>
@@ -1210,7 +1222,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 
 		  <h5>Payment and subscription data</h5>
 		  <p>
-			We do not receive your card details. We may receive subscription status/entitlements and purchase tokens or order identifiers from Google Play Billing to verify your access.
+			We do not receive your card details. We may receive subscription status/entitlements and purchase tokens or order identifiers from Google Play Billing or the Apple App Store to verify your access.
 		  </p>
 
 		  <h5>Server logs</h5>
@@ -1236,7 +1248,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  <ul>
 			<li>Directly from you (account setup, profile, tasks, journal, meals, AI chats)</li>
 			<li>Automatically from your device when using the app (technical logs)</li>
-			<li>From Google Play Billing (subscription status and entitlement verification)</li>
+			<li>From Google Play Billing or the Apple App Store (subscription status and entitlement verification)</li>
 		  </ul>
 		  <h4>5) Purposes and legal bases for processing (GDPR Art. 6)</h4>
 		  <p>We process your personal data for the following purposes and under the listed legal bases:</p>
@@ -1249,7 +1261,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			</li>
 			<li>
 			  <strong>Account creation, sign-in, and session management</strong>  
-			  (Firebase Auth, Google Sign-In)  
+			  (Firebase Auth, Google Sign-In, Apple Sign-In)  
 			  <br><em>Legal bases:</em> Contract, Legitimate interests
 			</li>
 			<li>
@@ -1269,7 +1281,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			</li>
 			<li>
 			  <strong>Subscription management and access control</strong>  
-			  (Google Play Billing verification)  
+			  (Google Play Billing / Apple App Store verification)  
 			  <br><em>Legal bases:</em> Contract, Legitimate interests, Legal obligation (for receipts where required)
 			</li>
 			<li>
@@ -1320,11 +1332,12 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 
 		  <h4>7) Payments and subscriptions</h4>
 		  <p>
-			Subscriptions are handled through <strong>Google Play Billing</strong>. We do not process or store your card or payment instrument details.  
-			We may process subscription status/entitlements, purchase tokens, or order identifiers provided by Google to verify and manage your access.  
+			Subscriptions are handled through <strong>Google Play Billing (on Android)</strong> or <strong>the Apple App Store (on iOS)</strong>. We do not process or store your card or payment instrument details.  
+			We may process subscription status/entitlements, purchase tokens, or order identifiers provided by Google or Apple to verify and manage your access.  
 		  </p>
 		  <p>
-			Refunds are subject to <strong>Google Play’s policies</strong> and your local consumer law.
+			Refunds are subject to the respective store's policies <strong>(Google Play or Apple App Store)</strong> and your local consumer law.
+			Please note that for purchases made on iOS, Apple acts as the merchant of record and typically handles all refund requests directly.
 		  </p>
 		  <h4>8) Notifications and device permissions</h4>
 		  <ul>
@@ -1333,7 +1346,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			  You can opt out anytime in Android system settings.
 			</li>
 			<li>
-			  <strong>Exact alarms:</strong> The app may schedule time-based reminders.  
+			  <strong>Exact alarms (Android Only):</strong> The app may schedule time-based reminders.  
 			  On newer Android versions, exact alarms may require an additional permission, which you can manage in system settings.
 			</li>
 			<li>
@@ -1342,8 +1355,8 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			  You can decline and still use the app’s core features.
 			</li>
 			<li>
-			  <strong>Camera permission & consent:</strong> 
-			  We will request your explicit permission before accessing the camera for health-related measurements. 
+			  <strong>Camera permission & consent(Health Features):</strong> 
+			  Where this feature is available, we will request your explicit permission before accessing the camera for health-related measurements. 
 			  By allowing camera access for these features you provide explicit consent for local processing of the measurements. 
 			  You may revoke camera permission at any time in your device settings; revoking permission will disable the related feature.
 			</li>
@@ -1367,8 +1380,8 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 
 		  <h4>11) Data sharing and processors</h4>
 		  <p>
-			Note on camera-based health measurements: Any health-related measurements derived from the camera (e.g., heart rate, SpO₂) 
-			are processed locally on the device and are not shared with Google, Firebase, or any other processors or third parties. 
+			Note on camera-based health measurements(Where available): Any health-related measurements derived from the camera (e.g., heart rate, SpO₂) 
+			are processed locally on the device and are not shared with Google, Apple, Firebase, or any other processors or third parties. 
 			No image frames or optical signals used to produce these estimates are uploaded.
 			We share personal data only with trusted service providers acting as processors, and only as needed to provide the app:
 		  </p>
@@ -1389,10 +1402,10 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			  <br><em>Privacy/DPA:</em> As above (Google)
 			</li>
 			<li>
-			  <strong>Google Play Billing</strong>  
+			  <strong>Google Play Billing (Android) & Apple App Store (iOS)</strong>  
 			  Subscription management and purchase verification  
 			  <br><em>Data:</em> Purchase tokens, order identifiers, subscription status  
-			  <br><em>Privacy:</em> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a>
+			  <br><em>Privacy:</em> <a href="https://policies.google.com/privacy" target="_blank">Google Privacy Policy</a> / <a href="https://www.apple.com/legal/privacy/en-ww/" target="_blank">Apple Privacy Policy</a>
 			</li>
 			<li>
 			  <strong>Email service (if configured)</strong>  
@@ -1427,7 +1440,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  </p>
 		  <h4>12) International transfers</h4>
 		  <p>
-			We may transfer data outside the EEA (for example, to Google in the United States).  
+			We may transfer data outside the EEA (for example, to Google or Apple servers in the United States).  
 			Where transfers occur, we rely on:
 		  </p>
 		  <ul>
@@ -1450,7 +1463,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  <ul>
 			<li>Encryption in transit (TLS) for network communications</li>
 			<li>Access controls and least-privilege principles for databases</li>
-			<li>Authentication and authorization via Firebase</li>
+			<li>Authentication and authorization via Firebase (and Apple Sign-In where applicable)</li>
 			<li>Operational logging and monitoring for our Cloud Functions</li>
 		  </ul>
 		  <p>
@@ -1490,7 +1503,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  <h4>15) How to exercise your rights</h4>
 		  <ul>
 			<li><strong>In-app:</strong> You may review and edit much of your data directly within the app.</li>
-			<li><strong>Deletion:</strong> Request account deletion via the app (if available) or by emailing us at <a href="mailto:glowupdailyapp@gmail.com">glowupdailyapp@gmail.com</a>.  
+			<li><strong>Deletion:</strong> You may request the deletion of your account and associated data directly within the app settings or by emailing us at <a href="mailto:glowupdailyapp@gmail.com">glowupdailyapp@gmail.com</a>.  
 				We will verify your identity and process the request within the statutory timeframe.</li>
 			<li><strong>AI content:</strong> Delete AI chat history from within the app (if available) or contact us directly.</li>
 		  </ul>
@@ -1533,7 +1546,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 
 		  <h4>18) Third-party links</h4>
 		  <p>
-			The app may contain links to third-party sites (e.g., Google policies).  
+			The app may contain links to third-party sites (e.g., Google or Apple policies).  
 			We are not responsible for the privacy practices of those third parties.  
 			Please review their privacy policies when visiting their sites.
 		  </p>
@@ -1565,7 +1578,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
           <p class="sub">Please read these terms carefully before using GlowUp Daily.</p>
           <h4>1) About these Terms</h4>
 		  <p>
-			These Terms of Service (“Terms”) govern your access to and use of the <strong>GlowUp Daily</strong> Android application and related services (“Service”).  
+			These Terms of Service (“Terms”) govern your access to and use of the <strong>GlowUp Daily</strong> mobile applications (available on Android and iOS) and related services (“Service”).  
 			By creating an account, accessing, or using the Service, you agree to these Terms.  
 			If you do not agree, please do not use the Service.
 		  </p>
@@ -1587,7 +1600,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 
 		  <h4>3) Account and Security</h4>
 		  <ul>
-			<li><strong>Account creation:</strong> You may sign in using Firebase Authentication (e.g., Google Sign-In or email/password).</li>
+			<li><strong>Account creation:</strong> You may sign in using Firebase Authentication (e.g., Google Sign-In, Apple Sign-In, or email/password).</li>
 			<li><strong>Accuracy:</strong> You must provide accurate information and keep your account details up to date.</li>
 			<li><strong>Security:</strong> Keep your credentials confidential and notify us promptly of any unauthorized use or security breach.</li>
 			<li>One account per person. Your account is personal and non-transferable.</li>
@@ -1599,15 +1612,20 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			<li>Nutrition logging and targets (calories/macros) that you enter</li>
 			<li>Optional AI features (text and optional images) routed securely to Google’s Generative Language API</li>
 			<li>Local notifications and reminders</li>
-			<li>Planned in-app subscriptions via Google Play Billing that grant access to premium features</li>
+			<li>Planned in-app subscriptions via Google Play Billing or the Apple App Store that grant access to premium features.</li>
 		  </ul>
 		  <p>
-  		        The Service may provide optional, on-device estimations of health-related metrics  
-  		        (for example, estimated heart rate or blood oxygen / SpO₂) using your device camera and flash where available.  
-  		        By enabling and using these features, you expressly consent to the app accessing the camera for this purpose.
+				Platform Differences and Feature Availability: The Service is available on multiple operating systems (Android and iOS). 
+				You acknowledge that features, functionality, and availability may vary between platforms and devices. We do not guarantee
+				that a feature available on one platform (e.g., Android) will be available on another (e.g., iOS) at the same time.
 		  </p>
 		  <p>
-				The Service displays advertisements, including personalized and non-personalized ads delivered via Google AdMob, 
+  		        Health Estimates (Where Available): The Service may provide optional, on-device estimations of health-related metrics
+				(for example, estimated heart rate or blood oxygen / SpO₂) using your device camera and flash on supported devices and
+				app versions. By enabling and using these features, you expressly consent to the app accessing the camera for this purpose.
+		  </p>
+		  <p>
+				Ads (Where Available): The Service displays advertisements, including personalized and non-personalized ads delivered via Google AdMob, 
 				depending on your consent and device settings.
 		  </p>
 		  <ul>
@@ -1668,14 +1686,14 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  <p>The Service integrates with third-party providers, including:</p>
 		  <ul>
 			<li>Google Firebase (Authentication, Firestore)</li>
-			<li>Google Play Billing</li>
+			<li>Google Play Billing and Apple App Store (Payments)</li>
 			<li>Google Cloud Functions (including our Gemini proxy)</li>
 			<li>Email providers (Gmail SMTP or SendGrid) for transactional emails</li>
-			<li>Google AdMob (advertising services — personalized and non-personalized ads)</li>
+			<li>Google AdMob (Currently on Android version only — personalized and non-personalized ads)</li>
 		  </ul>
 		  
 		  <p>
-		    Advertising services are subject to Google’s Advertising Terms and Privacy Policies. 
+		    Advertising Terms: Where ads are displayed (e.g., on Android) they are subject to Google’s Advertising Terms and Privacy Policies. 
 			Your ad choices, including GDPR consent, are managed through the consent form shown in the app.
 		  </p>
 		  
@@ -1685,15 +1703,19 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  </p>
 
 		  <h4>9) Subscriptions, Billing, and Promotions</h4>
-		  <p><strong>Provider:</strong> Subscriptions are purchased and managed through Google Play (Google Play Billing).  
+		  <p><strong>Provider:</strong> Subscriptions are purchased and managed through Google Play Billing (Android) or the Apple App Store (iOS).  
 		  We do not store your payment card details.</p>
 
-		  <p><strong>Pricing:</strong> Prices, currency, and taxes are displayed in Google Play before purchase.</p>
+		  <p><strong>Pricing:</strong> Prices, currency, and taxes are displayed in the respective store (Google Play or App Store) before purchase.</p>
 
 		  <p><strong>Auto-renewal:</strong> Subscriptions renew automatically unless canceled before the renewal date.</p>
 
-		  <p><strong>Cancellation:</strong> You may cancel anytime via <em>Google Play &gt; Payments & subscriptions</em>.  
-		  Access remains available until the end of the paid period.</p>
+		  <p><strong>Cancellation:</strong> You may cancel anytime via:
+		  <ul>
+			<li><em>Android: Google Play &gt; Payments & subscriptions</em>.</li>
+			<li><em>iOS: Apple ID Settings &gt Subscriptions.</em></li>
+		  </ul>
+		  <p>Access remains available until the end of the paid period.</p>
 
 		  <p><strong>Free trials:</strong> If offered, trials convert to a paid subscription unless canceled before the trial ends.  
 		  Eligibility and duration may vary.</p>
@@ -1701,9 +1723,13 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  <p><strong>Changes:</strong> We may change subscription pricing, features, or tiers with reasonable prior notice.  
 		  Changes take effect at the next billing cycle, subject to applicable law.</p>
 
-		  <p><strong>Refunds:</strong> Refunds are handled under Google Play policies and applicable law.  
-		  Partial refunds are typically not provided once a billing period begins, unless required by law.  
-		  You may request refunds directly through Google Play.</p>
+		  <p><strong>Refunds:</strong>
+		  <ul>
+			<li>Android: Refunds are handled under Google Play policies and applicable law. Partial refunds are typically 
+			not provided once a billing period begins, unless required by law.</li>
+			<li>iOS: Refunds for purchases made via the Apple App Store are handled exclusively by Apple. We do not have 
+			the ability to process refunds for Apple users. You must contact Apple Support directly to request a refund.</li>
+		  </ul>
 
 		  <p><strong>Promotions and promo codes:</strong>  
 			We may offer promo codes granting time-limited access. Conditions will be disclosed at redemption.  
@@ -1716,16 +1742,13 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			<li><strong>Main characteristics:</strong> Digital fitness and well-being tools as described in Section 4.</li>
 			<li><strong>Total price:</strong> Displayed in Google Play prior to purchase, including taxes where applicable.</li>
 			<li><strong>Duration:</strong> Subscription period shown at checkout; auto-renews until canceled.</li>
-			<li><strong>Termination:</strong> Cancel anytime in Google Play; effective at end of billing period.</li>
-			<li><strong>Functionality and interoperability:</strong> Android app via Google Play; requires compatible device, internet access, and a Google account.</li>
+			<li><strong>Termination:</strong> Cancel anytime in your device’s store settings; effective at end of billing period.</li>
+			<li><strong>Functionality and interoperability:</strong>  Mobile app requires compatible device (Android or iOS), internet access, and a Google or Apple account.</li>
 			<li><strong>Digital content/performance:</strong> Access begins immediately after purchase unless otherwise stated.</li>
 		  </ul>
 
 		  <p><strong>Right of withdrawal (cooling-off):</strong>  
-			Under EU law, for digital content/services delivered immediately, consumers may lose the 14-day withdrawal right once performance begins,  
-			if they consent to immediate performance and acknowledge losing the right.  
-			Google Play will present applicable disclosures where relevant.  
-			Your statutory rights remain unaffected.
+			Under EU law, for digital content/services delivered immediately, consumers may lose the 14-day withdrawal right once performance begins.
 		  </p>
 
 		  <h4>10) Privacy and Data Protection</h4>
@@ -1738,7 +1761,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			in your device settings or within the app settings (where available).
 		  </p>
 		  <p>
-		    Advertising displayed in the Service is governed by our Privacy Policy, which explains how Google 
+		    Advertising displayed in the Service (where available) is governed by our Privacy Policy, which explains how Google 
 			AdMob processes data depending on your consent.
 		  </p>
 		  <h4>11) Intellectual Property</h4>
@@ -1746,13 +1769,16 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			<strong>Our IP:</strong> The Service and its content — including the software, user interface, trademarks, logos, graphics, and other materials (excluding your User Content and any open-source components) — are owned by us or our licensors and are protected by copyright, trademark and other intellectual property laws.
 		  </p>
 		  <p>
-			<strong>Limited license to you:</strong> Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to install and use the app on an Android device that you own or control, solely for your personal, non-commercial use.
+			<strong>Limited license to you:</strong>  Subject to these Terms, we grant you a limited, non-exclusive, non-transferable, revocable license to install and use the app on a mobile device that you own or control, solely for your personal, non-commercial use.
 		  </p>
 		  <p>
 			<strong>Feedback:</strong> If you provide suggestions, ideas, or other feedback about the Service, you grant us a worldwide, perpetual, irrevocable, royalty-free license to use, modify, and implement that feedback without obligation to you.
 		  </p>
 		  <p>
 			<strong>Open source:</strong> The Service may include open-source software governed by separate licenses. To the extent any open-source license grants you rights that conflict with these Terms, the open-source license will govern for that component.
+		  </p>
+		  <p>
+		    <strong>iOS Specific:</strong> This license is further limited to use on Apple-branded products as permitted by the Usage Rules set forth in the Apple Media Services Terms and Conditions
 		  </p>
 
 		  <h4>12) Service Changes and Availability</h4>
@@ -1773,7 +1799,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 		  <h4>14) Termination</h4>
 		  <ul>
 			<li>
-			  <strong>By you:</strong> You may stop using the Service at any time. You may request account deletion as described in our Privacy Policy. To stop future subscription charges, cancel via Google Play.
+			  <strong>By you:</strong> You may stop using the Service at any time. You may request account deletion as described in our Privacy Policy. To stop future subscription charges, cancel via Google Play (Android) or Apple ID Settings (iOS).
 			</li>
 			<li>
 			  <strong>By us:</strong> We may suspend or terminate your access with notice where practicable, or immediately for material breach, fraud, or legal reasons.
@@ -1807,7 +1833,7 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 
 		  <h4>18) Communications; Electronic Notices</h4>
 		  <p>
-			You consent to receive communications and notices electronically (for example, in-app messages, email, or via Google Play). These electronic communications satisfy any legal requirement that such notices be in writing.
+			You consent to receive communications and notices electronically (for example, in-app messages, email, or via Google Play / Apple App Store). These electronic communications satisfy any legal requirement that such notices be in writing.
 		  </p>
 		  <p>
 			If you withdraw consent to electronic communications where permitted by law, we may be required to suspend or restrict access to certain features.
@@ -1862,8 +1888,16 @@ Email request: glowupdailyapp@gmail.com (subject: “Delete my GlowUp Daily acco
 			  <strong>Force majeure:</strong> We are not liable for delays or failures in performance resulting from events beyond our reasonable control, such as network outages, natural disasters, strikes, or other force majeure events.
 			</li>
 		  </ul>
-
-		  <h4>23) Contact</h4>
+		  
+		  <h4>23) Legal Agreements</h4>
+		  <p>
+			By downloading the App from the Apple App Store, you agree that your use of the App is also governed by:  
+		  </p>
+		  <ul>
+			<li>Our Privacy Policy: <a href="#privacy">Privacy Policy</a></li>
+			<li>Apple’s Standard EULA: <a href="https://www.apple.com/legal/internet-services/itunes/dev/stdeula/">Apple Licensed Application End User License Agreement</a></li>
+		  </ul>
+		  <h4>24) Contact</h4>
 		  <p>
 			If you have questions about these Terms or the Service, please contact us at:  
 			<br>Email: <a href="mailto:glowupdailyapp@gmail.com">glowupdailyapp@gmail.com</a>
